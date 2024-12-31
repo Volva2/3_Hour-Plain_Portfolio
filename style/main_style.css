@@ -9,7 +9,7 @@
 
 
     --main-bg-color: #1B3025;
-    --main-bg-transparent-color: rgba(0, 0, 0, 0.8);
+    --main-bg-transparent-color: rgba(0, 0, 0, 0.9);
     --button-color: #F1F1F1;
 }
 
@@ -43,21 +43,21 @@
 
 @media (200px <= width <= 500px) {
     .frontpage-header {
-        margin: 1em;
-        display: grid;
-        grid-template-columns: 1r 1r;
-        justify-content: center;
-        justify-self: center;
-        align-self: center;
-        background-color: var(--main-bg-transparent-color);
         width: 100%;
+        display: grid;
+        grid-template-rows: 1r 1r;
     }
 
     .header-nav{
         border: #1B3025 1px solid;
-        font-size: 10vw;
+        font-size: 7vw;
         display: grid;
-        grid-template-rows: 1r 1r 1r 1r;
+        grid-template-columns: 1r 1r 1r 1r;
+        background-color: var(--main-bg-transparent-color);
+        width: 100vw;
+        overflow: hidden;
+        visibility: hidden;
+        position: fixed;
     }
 
     .header-nav > ol{
@@ -65,15 +65,22 @@
         list-style-type: none;
         justify-self: center;
         margin: 1em;
+        margin-top: 0;
     }
 
     .header-nav-lis{
         padding: 0.5em;
+        justify-self: center;
+        padding: 1em;
     }
 
     .header-nav-options{
         text-decoration: none;
         justify-self: center;
         color: white;
+    }
+
+    .theme-changer{
+        margin: 1.5em;
     }
 }
