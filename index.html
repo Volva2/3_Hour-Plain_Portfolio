@@ -12,17 +12,20 @@
         <div class="frontpage-start">
             <nav class="frontpage-header">
                 <nav class="header-nav">
+                    <p>Navigation</p>
                     <ol>
-                        <li class="header-nav-lis"><a class="header-nav-options" href="./index.html">Home</a></li>
+                        <li class="header-nav-lis current-page"><a class="header-nav-options" href="./index.html">Home</a></li>
                         <li class="header-nav-lis"><a class="header-nav-options" href="">About</a></li>
                         <li class="header-nav-lis"><a class="header-nav-options" href="">Work/Projects</a></li>
                         <li class="header-nav-lis"><a class="header-nav-options" href="">Contact</a></li>
                     </ol>
                 </nav>
-                <div class="theme-changer-container">
-                    <div class="theme-button-container"><button class="theme-button"></button></div>
-                </div>
-                <div><img class="mobile-nav-img" src="./resources/mobile_nav.png" alt=""></div>
+                <section class="mobile-nav-bar">
+                    <div><img class="mobile-nav-img" src="./resources/mobile_nav.png" alt=""></div>
+                    <div class="theme-changer-container">
+                        <div class="theme-button-container"><button class="theme-button"></button></div>
+                    </div>
+                </section>
             </nav>
             <section class="hero">
                     <div class="hero-text">
@@ -34,22 +37,24 @@
             </section>
             <img class="hero-down-arrow" src="./resources/down.png" alt="">
         </div>
-        <main>
-            <h1 class="main-work-heading">Work</h1>
-            <div>
-                <div class="work-example"><a href="https://github.com/Volva2/Portfolio"></a></div>
-                <div class="work-example"></div>
-                <div class="work-example"></div>
-                <div class="work-example"></div>
+
+        <main class="frontpage-work">
+            <h1 class="frontpage-work-heading">Work / Projects</h1>
+            <div class="frontpage-work-examples-container">
+                <div class="frontpage-work-examples"><a href="https://github.com/Volva2/Portfolio"></a></div>
+                <div class="frontpage-work-examples not-active"></div>
+                <div class="frontpage-work-examples not-active"></div>
+                <div class="frontpage-work-examples not-active"></div>
             </div>
         </main>
+
         <footer>
             <p class="footer-heading">Let's build something together</p>
             <section class="footer-contact-alt">
                 <p>znejisoftware@gmail.com</p>
                 <p>+1-202-(990)-9288</p>
             </section>
-            <img width="100vw" src="../resources/IMG_1 (43).JPG" alt="">
+            <img width="100%" src="../resources/IMG_1 (43).JPG" alt="">
         </footer>
         <link rel="stylesheet" href="script.js">
     </body>
