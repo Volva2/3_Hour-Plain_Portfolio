@@ -4,58 +4,179 @@
 :root {
     font-family: "Roboto Mono", serif;
     font-optical-sizing: auto;
-    font-weight: bold;
+    font-weight: 300;
     font-style: normal;
 
-
+    --primary-font-color: white;
     --main-bg-color: #1B3025;
-    --main-bg-transparent-color: rgba(0, 0, 0, 0.9);
+    --main-bg-transparent-color: rgba(0, 0, 0, 0.3);
     --button-color: #F1F1F1;
+
+    
+    overflow-x: hidden;
 }
 
 *{
     padding: 0;
     margin: 0;
+    color: var(--primary-font-color);
 }
 
-.roboto-mono {
-    font-family: "Roboto Mono", serif;
-    font-optical-sizing: auto;
+.frontpage-start{
+    background-image: url("../resources/IMG_1 (20).JPG");
+    background-size: 220vw;
+    animation: heroBackgroundAnimation 25s ease-in-out infinite;
+    display: grid;
+    grid-template-rows: 0.1fr 0.5fr 0.1fr;
+}
+
+@keyframes heroBackgroundAnimation {
+    45%{background-position: bottom}
+    99%{background-position: top}
+}
+
+.frontpage-header {
+    position: sticky;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: var(--main-bg-transparent-color);
+}
+
+.frontpage-header a{
+    text-decoration: none;
+}
+
+.header-nav{
+    margin: 1em;
+}
+
+.header-nav li{
+    font-size: 1em;
+    list-style: none;
+    display: inline;
+    margin: 2em;
+    width: 80%;
+}
+
+.header-nav li:hover{
+    text-decoration: underline;
     font-weight: bold;
-    font-style: normal;
 }
 
-@media (2500px >= width >= 750px) {
-    .frontpage-header {
-        margin: 1em;
-        display: grid;
-        
-    }
-    
-    .header-nav li{
-        font-size: 1.2em;
-        text-decoration: none;
-        display: inline;
-        margin: 1em;
-        width: 80%;
-    }
+.theme-changer-container{
+    margin-top: 1em;
+    margin-right: 2em;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: end;
+    justify-self: end;
+    align-items: start;
+    align-self: flex-start;
 }
+
+.theme-button-container{
+    background-color: gray;
+    width: 2em;
+    height: 1.3em;
+    border-radius: 15%;
+}
+
+.theme-button{
+    width: 1em;
+    height: 1em;
+    justify-self: center;
+    border: 0.05rem solid black;
+    border-radius: 15%;
+    position: absolute;
+    margin: 0.3em;
+    margin-right: 1.65em;
+}
+
+.theme-button:hover {
+    cursor: pointer;
+}
+
+.mobile-nav-img{
+    display: none;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 1em;
+    margin-top: 8em;
+}
+
+.hero-text{
+    margin: 5em;
+    justify-self: center;
+}
+
+.hero-heading{
+    font-size: 6.5em;
+    font-weight: bolder;
+}
+
+.hero-subheading{
+    font-size: 3em;
+    margin-top: -0.1em;
+    margin-bottom: 1em;
+}
+
+.hero-sub-subheading{
+    font-size: 1.5em;
+}
+
+.hero-img{
+    width: 20em;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20%;
+    box-shadow: -10px 10px 20px darkblue;
+    margin: 4em;
+    margin-bottom: 15em;
+}
+
+.hero-down-arrow{
+    width: 2em;
+    align-self: flex-start;
+    justify-self: center;
+    animation: heroDown 3s ease-in-out infinite;
+    margin-bottom: 5em;
+}
+
+@keyframes heroDown {
+    49%{margin-top: 1.5em;}
+    99%{margin-top: 0em;}
+}
+
+@media (600 <= width <= 2500){
+    
+}
+
 
 @media (200px <= width <= 500px) {
+    .frontpage-start{
+        background-image: url("../resources/IMG_1 (20).JPG");
+        background-size: 100vh;
+        animation: heroBackgroundAnimation 25s ease-in-out infinite;
+        display: grid;
+        grid-template-rows: 0.1fr 0.5fr 0.1fr;
+    }
+
     .frontpage-header {
         width: 100%;
         display: grid;
-        grid-template-rows: 1r 1r;
+        grid-template-columns: 1fr 1fr;
     }
 
     .header-nav{
         border: #1B3025 1px solid;
         font-size: 7vw;
         display: grid;
-        grid-template-columns: 1r 1r 1r 1r;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         background-color: var(--main-bg-transparent-color);
         width: 100vw;
-        overflow: hidden;
         visibility: hidden;
         position: fixed;
     }
@@ -80,7 +201,23 @@
         color: white;
     }
 
-    .theme-changer{
-        margin: 1.5em;
+    .theme-changer-container{
+        justify-content: end;
+        justify-self: end;
+        align-items: start;
+        align-self: flex-start;
+    }
+
+    .theme-button-container{
+        justify-self: end;
+    }
+
+    .mobile-nav-img{
+        background-color: #1B3025;
+        padding: 1em;
+    }    
+    
+    .mobile-nav-img{
+        display: grid;
     }
 }
