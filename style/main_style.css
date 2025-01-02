@@ -17,8 +17,8 @@
 
     
     overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
 }
 
 :root::-webkit-scrollbar {
@@ -75,6 +75,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Start of actual styling, with CSS for Nav and Header */
 
 .frontpage-start{
     background-image: url("../resources/IMG_1 (20).JPG");
@@ -163,6 +165,8 @@ table {
     display: none;
 }
 
+/* Hero CSS */
+
 .hero{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -212,11 +216,12 @@ table {
     99%{margin-top: 0em;}
 }
 
+/* Work CSS */
+
 .frontpage-work{
     display: grid;
     grid-template-rows: 1fr 10fr;
-    margin: 5em;
-    margin-top: -5.3rem;
+    margin-top: 13em;
 }
 
 .frontpage-work-heading{
@@ -224,27 +229,151 @@ table {
     font-size: 5em;
     font-weight: 900;
     justify-self: center;
-    background-color: var(--main-bg-color);
-    border-radius: 40% 40% 5% 5%;
-    padding: 1em;
-    padding-right: 2em;
-    padding-left: 2em;
 }
 
-.frontpage-work-examples-containers{
-    margin: 2em;
+.frontpage-work-examples-container{
+    margin: 8rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto-fit, minmax(0, 1fr)  minmax(0, 1fr);
+    gap: 5em;
 }
 
-.frontpage-work-examples{
+.frontpage-work-examples-container>a{
     background-color: var(--main-bg-color);
-    border: 0.2em #1B3025 solid;
+    width: 40%;
+    height: 70%;
+    max-width: 100%;
+    display: grid;
+    padding: 2em;
 }
 
-.not-active{
+.frontpage-work-examples:hover{
+    border: 0.2em #1B3025 solid;
+    cursor: pointer;
+}
+
+.frontpage-work-examples>p{
+    color: var(--secondary-font-color);
+    font-size: 2em;
+    align-self: flex-start;
+    justify-self: center;
+    margin-bottom: 1em;
+}
+
+.frontpage-work-examples.not-active {
     display: none;
 }
+
+.work-examples-img1{
+    width: 90%;
+    align-self: flex-start;
+    justify-self: center;
+    margin: 2em;
+}
+
+.work-examples-img1:hover{
+    position: absolute;
+    animation: workMainImgAnimation 0.7s ease-in-out;
+    width: 50%;
+}
+
+@keyframes workMainImgAnimation {
+    0%{width: 30%;}
+    100%{width: 50%;}
+}
+
+.frontpage-work-more-button{
+    align-self: center;
+    justify-self: center;
+    color: var(--secondary-font-color);
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin: 1rem;
+    margin-bottom: 8rem;
+}
+
+.frontpage-work-more-button:hover{
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+/* Footer CSS */
+
+footer{
+    height: 80%;
+    /* background-image: url("../resources/IMG_1 (95)-2.jpg"); */
+    background-color: var(--alt-bg-color);
+    display: grid;
+}
+
+.footer-content{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 10rem;
+}
+
+.footer-quick-contact{
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 2fr 0.5fr;
+    width: 75%;
+}
+
+.footer-quick-contact>p{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.footer-contact-button{
+    background-color: var(--main-bg-color);
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.footer-contact-button:hover{
+    width: 12rem;
+    height: 12rem;
+    cursor: pointer;
+    animation: footerContactButton 1s ease-in-out;
+}
+
+@keyframes footerContactButton {
+    0%{
+        width: 10rem;
+        height: 10rem;
+    }
+    100%{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+.footer-contact-button>p{
+    color: var(--secondary-font-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+    align-self: center;
+    justify-self: center;
+}
+
+.footer-contact-alt{
+    align-self: center;
+}
+
+.footer-contact-alt>p{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 0.1rem #F1F1F1 solid;
+    border-radius: 100px 100px 100px 100px;
+    justify-self: center;
+}
+
 
 
 
@@ -317,6 +446,8 @@ table {
         text-decoration: overline double black;
     }
 
+/* Hero Mobile CSS */
+
     .hero{
         display: block;
         grid-template-rows: 0.1fr 1fr;
@@ -364,5 +495,116 @@ table {
         margin-bottom: 5em;
     }
 
+/* Work Mobile CSS */
+    .frontpage-work{
+        display: grid;
+        grid-template-rows: 1fr;
+        margin-top: 4em;
+    }
+    
+    .frontpage-work-heading{
+        color: var(--secondary-font-color);
+        font-size: 1.5em;
+        font-weight: 900;
+        text-align: center;
+    }
+    
+    .frontpage-work-examples-container{
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: auto-fit, minmax(0, 1fr);
+        border-bottom: 0.2em #1B3025 solid;
+    }
+    
+    .frontpage-work-examples-container>a{
+        background-color: var(--main-bg-color);
+        width: 90%;
+        height: 70%;
+        max-width: 100%;
+        display: grid;
+        padding: 0.5em;
+    }
+    
+    .frontpage-work-examples>p{
+        color: var(--secondary-font-color);
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+    .frontpage-work-examples.not-active {
+        display: none;
+    }
+    
+    .work-examples-img1{
+        width: 90%;
+        align-self: flex-start;
+        justify-self: center;
+        margin: 2em;
+    }
 
+    .frontpage-work-more-button{
+        border: 0.2rem solid black;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    /* Footer Mobile CSS */
+
+    footer{
+        /* background-image: url("../resources/IMG_1 (95)-2.jpg"); */
+        background-color: var(--alt-bg-color);
+        display: grid;
+    }
+    
+    .footer-content{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 2rem;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .footer-quick-contact{
+        display: grid;
+        justify-self: center;
+        grid-template-columns: 2fr 0.5fr;
+        width: 85%;
+        margin: 2rem;
+    }
+    
+    .footer-quick-contact>p{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    
+    .footer-contact-button{
+        background-color: var(--main-bg-color);
+        border-radius: 100%;
+        width: 5rem;
+        height: 5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-contact-button>p{
+        color: var(--secondary-font-color);
+        font-size: 0.6rem;
+        font-weight: 400;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .footer-contact-alt{
+        align-self: center;
+    }
+    
+    .footer-contact-alt>p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border: 0.1rem #F1F1F1 solid;
+        border-radius: 100px 100px 100px 100px;
+        justify-self: center;
+    }
 }
