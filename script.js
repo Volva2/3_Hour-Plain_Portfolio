@@ -39,6 +39,7 @@ themeButton.addEventListener("click", () => {
         document.body.style.backgroundColor = "white"
         bodyBgSession = "white"
         root.style.setProperty('--secondary-font-color', 'black');
+        root.style.setProperty('--main-bg-color', 'white');
         rootSession = "black"
     }else{
         heroBg.style.backgroundImage = "url('../resources/dark-theme-hero-bg.jpg')"
@@ -52,6 +53,7 @@ themeButton.addEventListener("click", () => {
         document.body.style.backgroundColor = "#403f4c"
         bodyBgSession = "#403f4c"
         root.style.setProperty('--secondary-font-color', 'white');
+        root.style.setProperty('--main-bg-color', '#403f4c');
         rootSession = "white"
     }
 

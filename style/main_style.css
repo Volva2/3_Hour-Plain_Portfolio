@@ -72,6 +72,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+    text-decoration: none;
+}
 
 /* Start of actual styling, with CSS for Nav and Header */
 
@@ -96,10 +99,6 @@ table {
     background-color: var(--main-bg-transparent-color);
     position: fixed;
     width: 100%;
-}
-
-.frontpage-header a{
-    text-decoration: none;
 }
 
 .header-nav{
@@ -282,7 +281,6 @@ table {
     color: var(--secondary-font-color);
     font-weight: 900;
     font-size: 1.4rem;
-    text-decoration: none;
     margin: 1rem;
     margin-bottom: 8rem;
 }
@@ -434,7 +432,6 @@ table {
     }
 
     .header-nav > ol{
-        text-decoration: none;
         list-style-type: none;
         justify-self: center;
         width: 100%;
@@ -447,7 +444,6 @@ table {
     }
 
     .header-nav-options{
-        text-decoration: none;
         justify-self: center;
         color: var(--secondary-font-color)
     }
