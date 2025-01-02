@@ -1,11 +1,11 @@
 // Theme button
-let themeButton = document.body.getElementsByClassName("theme-button");
+let themeButton = document.body.getElementsByClassName("theme-button")[0];
 
-themeButton.addEventListener("click", function() {
-    if (themeButton.style.marginRight == 0){
-        themeButton.style.margin = "1.65em"
+themeButton.addEventListener("click", () => {
+    if (themeButton.style.marginLeft == "0.25em"){
+        themeButton.style.marginLeft = "1.1em"
     }else{
-        themeButton.style.margin = "0em"
+        themeButton.style.marginLeft = "0.25em"
     }
     console.log("JS Working")
 })
