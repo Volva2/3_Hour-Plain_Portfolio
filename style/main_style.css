@@ -234,7 +234,6 @@ table {
 }
 
 .frontpage-work-examples-container>a{
-    background-color: var(--main-bg-color);
     width: 40%;
     height: 70%;
     max-width: 100%;
@@ -295,7 +294,7 @@ table {
 
 /* Footer CSS */
 
-footer{
+.footer{
     height: 80%;
     /* background-image: url("../resources/IMG_1 (95)-2.jpg"); */
     background-color: var(--alt-bg-color);
