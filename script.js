@@ -71,3 +71,32 @@ themeButton.addEventListener("click", () => {
 //     document.body.style.backgroundColor = bodyBgSession
 //     root.style.setProperty('--secondary-font-color', rootSession);
 // }
+
+
+// Mobile Navigation
+let mobileNavButton = document.body.getElementsByClassName("mobile-nav-img")[0]
+let mobileNavMenu = document.body.getElementsByClassName("header-nav")[0]
+let mobileNavHeader = document.body.getElementsByClassName("mobile-menu-header")[0]
+let navOptions = document.body.getElementsByClassName("header-nav-options")
+let mobileNavExit = document.body.getElementsByClassName("mobile-menu-exit")[0]
+
+
+mobileNavButton.addEventListener("click", () => {
+    mobileNavMenu.style.display = "block"
+    mobileNavHeader.style.display = "visible"
+    mobileNavMenu.style.visibility = "visible"
+})
+
+for(let i of navOptions){
+    i.addEventListener("click", () => {
+        mobileNavMenu.style.display = "none"
+        mobileNavHeader.style.display = "hidden"
+        mobileNavMenu.style.visibility = "hidden"
+    })
+}
+
+mobileNavExit.addEventListener("click", () => {
+    mobileNavMenu.style.display = "none"
+    mobileNavHeader.style.display = "hidden"
+    mobileNavMenu.style.visibility = "hidden"
+})

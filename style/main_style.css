@@ -156,7 +156,7 @@ table {
     cursor: pointer;
 }
 
-.mobile-nav-img, .header-nav>p{
+.mobile-nav-img, .mobile-menu-header{
     display: none;
 }
 
@@ -400,12 +400,28 @@ table {
         padding: 1em;
     }
 
-    .header-nav>p{
+    .mobile-menu-header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mobile-menu-header>p{
         display: block;
         color: var(--secondary-font-color);
         font-size: 0.7em;
         margin: 1em;
         font-weight: 900;
+    }
+
+    .mobile-menu-exit{
+        width: 1rem;
+        height: 1rem;
+        border: 0.2rem black solid;
+        align-self: center;
+        justify-self: end;
+        margin-right: 1rem;
+        background-image: url("../resources/close.png");
+        background-size: 100%;
     }
 
     .header-nav{
